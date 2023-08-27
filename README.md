@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+Vehicle Tracking App Documentation
+Welcome to the documentation for the Vehicle Tracking App! This document provides an overview of the app's components, styles, features, and functionality. Follow the steps below to understand and use the app effectively.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Introduction
+Getting Started
+Components
+FormComponent
+LoginScreen
+MapComponent
+SignUpScreen
+Styling
+FormComponent Styles
+LoginScreen Styles
+MapComponent Styles
+SignUpScreen Styles
+Global Styles
+Authentication
+AuthService
+Location Tracking
+LocationTracker
+App Structure
+Conclusion
+Introduction
+The Vehicle Tracking App is designed to help users track their vehicles in real time. The app includes features such as user authentication, vehicle details management, live location tracking, and more. It uses React for the front-end interface and makes API requests to interact with the backend server.
 
-## Available Scripts
+Getting Started
+To get started with the Vehicle Tracking App, follow these steps:
 
-In the project directory, you can run:
+Clone the repository to your local machine.
+Open a terminal window and navigate to the project directory.
+Run the following command to install the required dependencies:
+bash
+Copy code
+npm install
+Once the installation is complete, run the following command to start the app:
+bash
+Copy code
+npm start
+The app will open in your default web browser, and you can start exploring its features.
 
-### `npm start`
+Components
+FormComponent
+The FormComponent is responsible for allowing users to input and save vehicle details such as the plate number and device name.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
+Import the FormComponent into your component:
+jsx
+Copy code
+import FormComponent from './FormComponent';
+Add the FormComponent to your JSX code:
+jsx
+Copy code
+<FormComponent onSave={handleSave} />
+Implement the handleSave function to handle the saved data.
+LoginScreen
+The LoginScreen component provides a user login form for authentication.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Usage
+Import the LoginScreen component:
+jsx
+Copy code
+import LoginScreen from './LoginScreen';
+Add the LoginScreen component to your JSX code:
+jsx
+Copy code
+<LoginScreen onLogin={handleLogin} />
+Implement the handleLogin function to manage user login.
+MapComponent
+The MapComponent displays a map with a custom marker at the specified latitude and longitude.
 
-### `npm test`
+Usage
+Import the MapComponent:
+jsx
+Copy code
+import MapComponent from './MapComponent';
+Include the MapComponent in your JSX code:
+jsx
+Copy code
+<MapComponent latitude={26.2124} longitude={78.1772} />
+Adjust the latitude and longitude props as needed.
+SignUpScreen
+The SignUpScreen component allows users to sign up by providing their personal information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage
+Import the SignUpScreen component:
+jsx
+Copy code
+import SignUpScreen from './SignUpScreen';
+Include the SignUpScreen component in your JSX code:
+jsx
+Copy code
+<SignUpScreen onSignUp={handleSignUp} />
+Implement the handleSignUp function to handle user sign-up.
+Styling
+FormComponent Styles
+The FormComponent styles are defined in the FormComponent.css file.
 
-### `npm run build`
+LoginScreen Styles
+The LoginScreen styles are defined in the LoginScreen.css file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+MapComponent Styles
+The MapComponent styles are defined in the MapComponent.css file.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+SignUpScreen Styles
+The SignUpScreen styles are defined in the SignUpScreen.css file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Global Styles
+Global styles for the app are defined in the App.css file. This includes styles for the header, main content, buttons, and more.
 
-### `npm run eject`
+Authentication
+AuthService
+The AuthService module provides functions for user authentication and managing authorization headers for API requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Usage
+Import AuthService:
+jsx
+Copy code
+import AuthService from './AuthService';
+Authenticate the user using the login function:
+jsx
+Copy code
+const response = await AuthService.login(email, password);
+Set the authorization header using the setAuthorizationHeader function:
+jsx
+Copy code
+AuthService.setAuthorizationHeader(token);
+Check if the user is authenticated:
+jsx
+Copy code
+const isAuthenticated = AuthService.isAuthenticated();
+Location Tracking
+LocationTracker
+The LocationTracker component displays the user's current latitude and longitude for location tracking.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage
+Import the LocationTracker component:
+jsx
+Copy code
+import LocationTracker from './LocationTracker';
+Include the LocationTracker component in your JSX code:
+jsx
+Copy code
+<LocationTracker />
+App Structure
+The app's structure is defined in the App.js file. It includes the main layout, routing, and conditional rendering of components based on authentication and sign-up status.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Conclusion
+Congratulations! You have successfully learned about the components, styles, features, and functionality of the Vehicle Tracking App. You can now use the app to track vehicles, manage user authentication, and display live location information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any questions or need further assistance, please refer to the documentation or reach out to our support team.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy tracking!
