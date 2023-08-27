@@ -1,26 +1,31 @@
-Vehicle Tracking App Documentation
+Vehicle Tracking App Documentation ------>
+
+
 Welcome to the documentation for the Vehicle Tracking App! This document provides an overview of the app's components, styles, features, and functionality. Follow the steps below to understand and use the app effectively.
 
-Table of Contents
-Introduction
-Getting Started
-Components
-FormComponent
-LoginScreen
-MapComponent
-SignUpScreen
-Styling
+Table of Contents -->
+1- Introduction
+2- Getting Started
+3- Components
+4- FormComponent
+5- LoginScreen
+6- MapComponent
+7- SignUpScreen
+8- Styling
 FormComponent Styles
 LoginScreen Styles
 MapComponent Styles
 SignUpScreen Styles
 Global Styles
-Authentication
-AuthService
-Location Tracking
-LocationTracker
-App Structure
-Conclusion
+9- Authentication
+10- AuthService
+11- Location Tracking
+12- LocationTracker
+13- App Structure
+14- Conclusion
+
+
+
 Introduction
 The Vehicle Tracking App is designed to help users track their vehicles in real time. The app includes features such as user authentication, vehicle details management, live location tracking, and more. It uses React for the front-end interface and makes API requests to interact with the backend server.
 
