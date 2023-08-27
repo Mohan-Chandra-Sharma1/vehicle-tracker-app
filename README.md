@@ -26,10 +26,12 @@ Global Styles
 
 
 
-Introduction
+Introduction ->
 The Vehicle Tracking App is designed to help users track their vehicles in real time. The app includes features such as user authentication, vehicle details management, live location tracking, and more. It uses React for the front-end interface and makes API requests to interact with the backend server.
 
-Getting Started
+
+
+Getting Started ->
 To get started with the Vehicle Tracking App, follow these steps:
 
 Clone the repository to your local machine.
@@ -44,7 +46,7 @@ Copy code
 npm start
 The app will open in your default web browser, and you can start exploring its features.
 
-Components
+Components ->
 FormComponent
 The FormComponent is responsible for allowing users to input and save vehicle details such as the plate number and device name.
 
